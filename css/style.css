@@ -1,0 +1,243 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:black;
+overflow-x:hidden;
+color:white;
+}
+
+/* Hero section */
+
+.hero{
+height:100vh;
+position:relative;
+overflow:hidden;
+}
+
+/* Background Image */
+
+.bg-image{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+animation:zoomEffect 10s infinite alternate;
+}
+
+@keyframes zoomEffect{
+
+0%{
+transform:scale(1);
+}
+
+100%{
+transform:scale(1.12);
+}
+
+}
+
+/* Black smooth blend */
+
+.overlay{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0) 10%,
+rgba(0,0,0,.3) 40%,
+rgba(0,0,0,.7) 70%,
+black 100%
+);
+
+}
+
+/* Text */
+
+.content{
+
+position:absolute;
+
+bottom:150px;
+
+left:30px;
+
+z-index:100;
+
+}
+
+.right-text{
+margin-left: 40px;
+}
+
+.content h1{
+font-size:55px;
+margin-bottom:10px;
+animation:
+slideUp 1s ease,
+floatName 3s ease-in-out infinite;
+}
+
+@keyframes floatName{
+
+0%{
+transform:translateY(0px)
+rotate(0deg);
+}
+
+50%{
+transform:translateY(-8px)
+rotate(2deg);
+}
+
+100%{
+transform:translateY(0px)
+rotate(0deg);
+}
+
+}
+
+.content p{
+
+opacity:.8;
+
+margin-bottom:20px;
+
+animation:slideUp 1.5s ease;
+}
+
+.buttons{
+
+display:flex;
+gap:15px;
+}
+
+/* Buttons */
+
+.btn1,.btn2{
+
+padding:14px 25px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:.5s;
+}
+
+.btn1{
+
+background:white;
+color:black;
+}
+
+.btn2{
+
+background:
+rgba(255,255,255,.15);
+
+backdrop-filter:blur(10px);
+
+color:white;
+}
+
+.btn1:hover,
+.btn2:hover{
+
+transform:scale(1.1);
+
+}
+
+/* Cards */
+
+.cards{
+
+padding:20px;
+
+margin-top:-80px;
+
+position:relative;
+
+z-index:200;
+}
+
+.card{
+background:#111;
+padding:20px;
+border-radius:25px;
+margin-bottom:18px;
+transition:.5s;
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+0 0 30px
+rgba(255,255,255,.3);
+
+}
+
+.card-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+@keyframes slideUp{
+
+from{
+
+opacity:0;
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* Footer */
+
+.footer{
+padding:25px;
+text-align:center;
+margin-top:40px;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(10px);
+
+border-top:1px solid
+rgba(255,255,255,.1);
+
+color:rgba(255,255,255,.7);
+}
+
+.footer p{
+font-size:14px;
+letter-spacing:1px;
+}
